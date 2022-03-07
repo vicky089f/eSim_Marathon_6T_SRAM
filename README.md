@@ -22,6 +22,11 @@ MTCMOS requires the sleep transistors to have a higher threshold voltage for les
 The higher threshold voltage was abhieved by applying a substrate bias to both the sleep transistors.
 Finally, the input pulses were given in an appropriate manner to obtain the output waveforms.
 
+## Tools Used
+- eSim
+- Skywater 130nm PDK
+- ngspice
+
 ## Implemented Circuit Diagram
 ![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/MTSRAM_esim.jpg)
 
@@ -40,3 +45,20 @@ Finally, the input pulses were given in an appropriate manner to obtain the outp
 
 ### Q
 ![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/Q.jpg)
+
+## Netlist
+The netlist files can be found in [Netlist](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/tree/main/Netlist).
+
+## Author
+Vignesh Bharadwaj, B.E. Electrical and Electronics Engineering, BITS Pilani, Hyderabad Campus
+
+## Acknowledgement
+1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+2. FOSSEE, IIT Bombay
+
+## References
+1. A. Bhaskar, "Design and analysis of low power SRAM cells," 2017 Innovations in Power and Advanced Computing Technologies (i-PACT), 2017, pp. 1-5, doi: 10.1109/IPACT.2017.8244888.
+2. S.A, Sivakumar & Geetha, S. (2019). Design and Analysis of Low Power MTCMOS using SRAM cell. 09. 91-99.
+
+## Results
+The list of the completed circuits can be found here [eSim Completed Results](https://esim.fossee.in/hackathon/completed-circuits)
