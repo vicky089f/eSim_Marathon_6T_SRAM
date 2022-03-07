@@ -1,0 +1,37 @@
+* C:\Users\VIGNESH\eSim-Workspace\2_bit_DAC\2_bit_DAC.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 06/23/21 22:59:07
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+.include switch_A.sub
+
+R1  vrefH Net-_R1-Pad2_ 250		
+R2  Net-_R1-Pad2_ Net-_R2-Pad2_ 250
+R3  Net-_R2-Pad2_ Net-_R3-Pad2_ 250
+R4  Net-_R3-Pad2_ vrefL 250
+
+* U1  /vrefH Net-_R4-Pad2_ /vdd /d0 /d1 /vout PORT
+
+X1  vdd d0 Net-_R1-Pad2_ Net-_R2-Pad2_ Net-_X1-Pad5_ switch_A
+X2  vdd d0 Net-_R3-Pad2_ vrefL Net-_X2-Pad5_ switch_A
+X3  vdd d1 Net-_X1-Pad5_ Net-_X2-Pad5_ vout switch_A
+
+Vdd vdd 0 3.3
+VrefH vrefH 0 3.3
+VrefL vrefL 0 0
+Vd0 d0 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+Vd1 d1 0 pulse(0 1.8 0s 0s 0s 10us 20us)
+
+.tran 0.1us 20us
+
+.control
+run
+
+plot V(d0) V(d1) V(vout)
+
+.endc
+
+.end

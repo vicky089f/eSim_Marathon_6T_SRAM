@@ -1,0 +1,16 @@
+.lib "sky130_fd_pr\models\sky130.lib.spice" tt
+
+.subckt switch_A vdd digital_input vin_1 vin_2 vout 
+
+
+xM1  Net-_M1-Pad1_ digital_input vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xM5  Net-_M1-Pad1_ digital_input GND GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM2  Net-_M2-Pad1_ Net-_M1-Pad1_ vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xM6  Net-_M2-Pad1_ Net-_M1-Pad1_ GND GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM3  vout Net-_M1-Pad1_ vin_1 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xM7  vout Net-_M1-Pad1_ vin_2 GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM4  vin_1 Net-_M2-Pad1_ vout GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM8  vin_2 Net-_M2-Pad1_ vout vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+* Control Statements
+
+.ends switch_A

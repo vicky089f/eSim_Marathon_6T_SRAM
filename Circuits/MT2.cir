@@ -1,0 +1,43 @@
+
+.lib "sky130_fd_pr\models\sky130.lib.spice" tt
+
+.include CMOS_Inv.sub
+
+xM2  Q nQ virtual_GND virtual_GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM1  Q nQ virtual_VDD virtual_VDD sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xM4  nQ Q virtual_GND virtual_GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM3  nQ Q virtual_VDD virtual_VDD sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xM6  nBL WL nQ GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM5  BL WL Q GND sky130_fd_pr__nfet_01v8 w=.42 l=.5
+xM7  virtual_VDD nCLK VDD body_P sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xM8  virtual_GND CLK GND body_N sky130_fd_pr__nfet_01v8 w=.42 l=.5
+
+X1  VDD CLK nCLK CMOS_Inv		
+
+Vdd VDD 0 3.3
+
+Vclk CLK 0 pulse(0 3.3 0s 0s 0s 5us 10us)
+Vbl BL 0 pulse(3.3 0 0s 0s 0s 15us 30us)
+Vnbl nBL 0 pulse(0 3.3 0s 0s 0s 15us 30us)
+Vwl WL 0 pulse(0 3.3 0s 0s 0s 5us 20us)
+
+Vn body_N 0 -1
+Vp body_P 0 4.3
+
+.tran 0.01us 120us
+
+.control
+run
+
+plot V(CLK)
+plot V(WL)
+plot V(BL)
+plot V(Q)
+plot V(nQ)
+
+.endc
+
+.end
+
+
+.end
