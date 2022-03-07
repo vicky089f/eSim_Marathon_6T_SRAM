@@ -23,5 +23,23 @@ The higher threshold voltage was abhieved by applying a substrate bias to both t
 Finally, the input pulses were given in an appropriate manner to obtain the output waveforms.
 
 ## Implemented Circuit Diagram
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/MTSRAM_esim.jpg)
 
 ## Implemented Circuit Waveforms
+### Clock
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/CLK.jpg)
+
+### Word Line (WL)
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/WL.jpg)
+
+### Bit Line (BL)
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/BL.jpg)
+
+### Bit-Bar Line (nBL)
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/nBL.jpg)
+
+### Q
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/Q.jpg)
+
+### nQ
+![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/nQ.jpg)
