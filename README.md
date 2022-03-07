@@ -40,6 +40,3 @@ Finally, the input pulses were given in an appropriate manner to obtain the outp
 
 ### Q
 ![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/Q.jpg)
-
-### nQ
-![](https://github.com/vicky089f/eSim_Marathon_6T_SRAM/blob/main/Images/nQ.jpg)
