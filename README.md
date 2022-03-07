@@ -1,4 +1,4 @@
-# 6T SRAM Cell
+# Low Power 6T SRAM Cell
 
 ## Abstract
 Since there is an ever increasing demand on battery operated portable devices, the rate of power consumption has become a major issue. To maintain a long battery life, the power consumption has to be managed in an appropriate way. One such aspect is of the SRAM cell, the basic unit of memory in cache. The conventional design of an SRAM cell is not good enough since it consumes a lot of power. That is where low power VLSI techniques come into picture. The MTCMOS technique has been applied on a 6T SRAM cell to evaluate the performance and the power consumption. MTCMOS uses two sleep transistors which have a higher threshold voltage to cut off the power supply to th SRAM cell when it is not being used.
